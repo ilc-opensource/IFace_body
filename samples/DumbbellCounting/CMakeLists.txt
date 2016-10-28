@@ -1,0 +1,48 @@
+include_directories("${PROJECT_SOURCE_DIR}/extra/RSWrapper")
+
+file(GLOB srcs "*.cpp")
+file(GLOB hdrs "*.h*")
+
+if(USE_PREBUILT_LIBRARIES)
+    include_directories(${CMAKE_SOURCE_DIR}/3rd_party/opencv/include)
+    link_directories(${CMAKE_SOURCE_DIR}/3rd_party/opencv/lib)
+    link_directories(${CMAKE_SOURCE_DIR}/3rd_party/librealsense/lib)
+endif()
+
+include_directories(${CMAKE_SOURCE_DIR}/include)
+if(WIN32)
+	if(CMAKE_BUILD_TYPE MATCHES "Debug")
+	    link_directories(${CMAKE_SOURCE_DIR}/lib/Windows/Debug)
+	else()
+	    link_directories(${CMAKE_SOURCE_DIR}/lib/Windows/Release)
+	endif()
+else()
+	if(CMAKE_BUILD_TYPE MATCHES "Debug")
+	    link_directories(${CMAKE_SOURCE_DIR}/lib/Linux/Debug)
+	else()
+	    link_directories(${CMAKE_SOURCE_DIR}/lib/Linux/Release)
+	endif()
+endif()
+
+add_executable(DumbbellCounting ${srcs} ${hdrs})
+target_link_libraries(DumbbellCounting IHumanDetector_RGBD RSWrapper)
+
+if(USE_PREBUILT_LIBRARIES)
+	if(CMAKE_BUILD_TYPE MATCHES "Debug")
+	    target_link_libraries(DumbbellCounting debug opencv_core310d debug opencv_imgcodecs310d debug opencv_imgproc310d debug opencv_highgui310d debug opencv_video310d debug opencv_ml310d)
+	else()
+		target_link_libraries(DumbbellCounting optimized opencv_core310 optimized opencv_imgcodecs310 optimized opencv_imgproc310 optimized opencv_highgui310 optimized opencv_video310 optimized opencv_ml310)
+	endif()
+else()
+    target_link_libraries(DumbbellCounting ${OpenCV_LIBS})
+endif()
+
+if(UNIX)
+    target_link_libraries(DumbbellCounting gomp)
+endif()
+
+if(RSWrapper_as_Shared)
+    set_target_properties(DumbbellCounting PROPERTIES COMPILE_DEFINITIONS "-DRSWrapper_SHARED")
+endif()
+
+set_target_properties(DumbbellCounting PROPERTIES FOLDER "Samples")

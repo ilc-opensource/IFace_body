@@ -1,0 +1,40 @@
+Coding Conventions
+
+The goal of this document is to define the stable consistant sdk interface.
+
+FILENAMING: Files are named in CamelCase starting with a capital letter.
+    
+NAMESPACES: Namespaces shall be named using all lower case and snake case if it is multiple words.
+
+CLASS/TYPE NAMING: Classes shall be named in CamelCase starting with a capital letter.  
+
+FUNCTION NAMING: Classes shall be named in camelCase starting with a lower case letter.  
+
+VARIABLE NAMING: Variable shall be named with camelCase starting with a lower case letter. If the varible contains an acronym then only capitalize the first letter in the acronym. Prefer full words to abbreviations.  
+Examples:
+    I32 helloWorld;
+    float showGuiScale;
+    I64 mipsPerSecond;
+    I64 windowsSdkVersion;
+    
+
+CONSTANT NAMING: Constants and enums values should be in upper case SNAKE_CASE. Enum type names should be named as a type in CamelCase. 
+Examples:
+    const I32 WARP_FACTOR=10;
+    enum CapacitorType {
+        FLUX_CAPACITOR, 
+        DECOUPLING_CAPACITOR
+    };
+
+SCOPES: Always use curly braces on your statements, especially single line if statements. This includes all code blocks: if, for, while, switch, etc.
+Examples:  
+    if(that) { return other; }
+    if(that)
+    { 
+        return other; 
+    }
+    while(that) 
+    { 
+        doOther(); 
+    }
+    

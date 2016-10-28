@@ -1,0 +1,4 @@
+add_subdirectory(3DPoseEstimation)
+add_subdirectory(DumbbellCounting)
+add_subdirectory(HumanDetection)
+add_subdirectory(IFaceTest)

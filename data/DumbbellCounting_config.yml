@@ -1,0 +1,5 @@
+%YAML:1.0
+
+modelFile: "data/Dumbbell_LookupTable.dat"
+dbDir: "data/DumbbellCounting_video"
+period: 5

@@ -1,0 +1,13 @@
+%YAML:1.0
+thumbnail: "C:/TEMP/Thumbnail"
+faceTestDir: "data/IFaceTest/"
+faceModelXML: "data/IFaceTest/faceset_model.xml"
+opencv_input_facemod: "data/opencv_input/facemod/GLOH"
+opencv_input_blinkmod: "data/opencv_input/blinkmod"
+opencv_input_smilemod: "data/opencv_input/smilemod"
+opencv_input_gendermod: "data/opencv_input/gendermod"
+opencv_input_agemod: "data/opencv_input/agemod"
+opencv_input_xmlEyeLeftCorner: "data/opencv_input/haarcascade_eye_leftcorner.xml"
+opencv_input_xmlMthLeftCorner: "data/opencv_input/haarcascade_mth_leftcorner.xml"
+opencv_input_xmlNose: "data/opencv_input/haarcascade_nose_20x20.xml"
+opencv_input_newSkinLookupTable: "data/opencv_input/New_Skin_LookupTable_int8_64.dat"

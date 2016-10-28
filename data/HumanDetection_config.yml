@@ -1,0 +1,6 @@
+%YAML:1.0
+
+headPosConfigFile: "data/config_headpose.yml"
+hboData: "data/Cropped_HBO_Data_4view_24_36.dat"
+modelDir: "data/TreeModel"
+leafNodeFile: "data/LeafNode.dat"

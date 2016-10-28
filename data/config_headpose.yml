@@ -1,0 +1,23 @@
+%YAML:1.0
+
+# Number of trees
+num_trees: 30
+# Number of tests
+num_tests: 2000
+# Max depth
+max_depth: 30
+# Min patches per node
+min_patches: 10
+# Images per class
+num_images: 30000
+# Patches per image
+num_patches: 1
+# Face size
+face_size: 48
+# Face height size
+face_size_h: 72
+# Patch size ratio
+patch_size_ratio: 1.0
+# Features
+features:
+    - 0

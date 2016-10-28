@@ -1,0 +1,11 @@
+%YAML:1.0
+faceModelXML: "data/IFaceTest/faceset_model.xml"
+facemod: "data/opencv_input/facemod/GLOH"
+blinkmod: "data/opencv_input/blinkmod"
+smilemod: "data/opencv_input/smilemod"
+gendermod: "data/opencv_input/gendermod"
+agemod: "data/opencv_input/agemod"
+colormod: "data/opencv_input/New_Skin_LookupTable_int8_64.dat"
+xmlEyeLeftCorner: "data/opencv_input/haarcascade_eye_leftcorner.xml"
+xmlMthLeftCorner: "data/opencv_input/haarcascade_mth_leftcorner.xml"
+xmlNose: "data/opencv_input/haarcascade_nose_20x20.xml"

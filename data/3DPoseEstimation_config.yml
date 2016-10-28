@@ -1,0 +1,5 @@
+%YAML:1.0
+opencv_input_newSkinLookupTable: "data/opencv_input/New_Skin_LookupTable_int8_64.dat"
+opencv_input_xmlEyeLeftCorner: "data/opencv_input/haarcascade_eye_leftcorner.xml"
+opencv_input_xmlMthLeftCorner: "data/opencv_input/haarcascade_mth_leftcorner.xml"
+opencv_input_xmlNose: "data/opencv_input/haarcascade_nose_20x20.xml"
